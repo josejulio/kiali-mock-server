@@ -1,0 +1,41 @@
+{
+  "name": "kiali-mock-server",
+  "description": "Kiali mock server",
+  "version": "0.1.0",
+  "homepage": "https://github.com/josejulio/kiali-mock-server",
+  "author": {
+    "name": "Josejulio Martínez",
+    "email": "jmartine@redhat.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/josejulio/kiali-mock-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/josejulio/kiali-mock-server/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/josejulio/kiali-mock-server/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/index",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "1.0.3",
+    "grunt-contrib-jshint": "1.1.0",
+    "grunt-contrib-watch": "1.1.0"
+  },
+  "keywords": [],
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "grunt-run": "^0.8.1",
+    "mockserver-client": "^5.1.1",
+    "mockserver-node": "^5.1.1",
+    "mustache": "^2.3.0",
+    "read-file": "^0.2.0"
+  }
+}
