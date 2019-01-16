@@ -1,5 +1,7 @@
 # kiali-mock-server
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/josejulio/kiali-mock-server.svg)](https://greenkeeper.io/)
+
 Kiali mock server
 
 ## Getting Started
