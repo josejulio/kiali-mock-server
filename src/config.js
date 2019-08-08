@@ -6,11 +6,11 @@ const config = {
 
         host: process.env.KIALI_SERVER || 'https://kiali-istio-system.127.0.0.1.nip.io',
         port: 3030,
-        record: talkback.Options.RecordMode.NEW, // NEW, OVERWRITE or DISABLED
+        record: talkback.Options.RecordMode.DISABLED, // NEW, OVERWRITE or DISABLED
         fallbackMode: talkback.Options.FallbackMode.NOT_FOUND, // PROXY or NOT_FOUND
         path: './tapes',
         // Headers to ignore when matching a recorded tape
-        ignoredHeaders: [
+        ignoreHeaders: [
             'accept',
             'accept-encoding',
             'accept-language',
@@ -29,7 +29,7 @@ const config = {
             'x-forwarded-proto'
         ],
         // Query params to ignore when matching a recorded tape
-        ignoredQueryParams: [
+        ignoreQueryParams: [
             'queryTime'
         ]
     }
