@@ -9,17 +9,21 @@ let server = Server(config.server);
 server.start();
 
 const startWatcher = () => {
-    const watcher = chokidar.watch('tapes', {
+    const watcher = chokidar.watch(config.server.path, {
         persistent: false,
+        alwaysStat: true
     });
-    watcher.on('change delete', (path) => {
+
+    const watcherListener = (path) => {
         console.log('Restarting the server to pickup changes on file:', path);
         console.log('Saving cassettes...');
         watcher.close();
         server.stop();
         startWatcher();
         server.start();
-    });
+    };
+
+    watcher.on('change', watcherListener).on('delete', watcherListener);
 };
 
 

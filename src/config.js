@@ -8,7 +8,7 @@ const config = {
         port: 3030,
         record: talkback.Options.RecordMode.DISABLED, // NEW, OVERWRITE or DISABLED
         fallbackMode: talkback.Options.FallbackMode.NOT_FOUND, // PROXY or NOT_FOUND
-        path: './tapes',
+        path: 'tapes',
         // Headers to ignore when matching a recorded tape
         ignoreHeaders: [
             'accept',
