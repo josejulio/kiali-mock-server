@@ -1,0 +1,522 @@
+{
+    meta: {
+        createdAt: '2019-08-08T16:16:28.157Z',
+        host: 'https://192.168.99.100:31385/kiali',
+        resHumanReadable: true,
+    },
+    req: {
+        url: '/api/namespaces/graph?duration=21600s&graphType=workload&injectServiceNodes=true&appenders=deadNode,sidecarsCheck,serviceEntry,istio,unusedNode,securityPolicy&namespaces=default',
+        method: 'GET',
+        headers: {
+            'x-forwarded-host': 'localhost:3000',
+            'x-forwarded-proto': 'http',
+            'x-forwarded-port': '3000',
+            'x-forwarded-for': '127.0.0.1',
+            cookie: '_ga=GA1.1.1514412781.1557421740; Webstorm-a9376004=b9c98f11-f6b4-4bb3-84c3-0983d04fd04e',
+            'accept-language': 'en,en-US;q=0.9,es-419;q=0.8,es;q=0.7',
+            referer: 'http://localhost:3000/console/graph/namespaces/?edges=noEdgeLabels&graphType=workload&namespaces=default&unusedNodes=true&injectServiceNodes=true&pi=0&duration=21600&layout=dagre',
+            'content-type': 'application/json;charset=utf-8',
+            'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+            'x-auth-type-kiali-ui': '1',
+            accept: 'application/json, text/plain, */*',
+            connection: 'close',
+        },
+        body: '',
+    },
+    res: {
+        status: 200,
+        headers: {
+            'content-type': [
+                'application/json',
+            ],
+            vary: [
+                'Accept-Encoding',
+            ],
+            date: [
+                'Thu, 08 Aug 2019 16:16:28 GMT',
+            ],
+            connection: [
+                'close',
+            ],
+            'transfer-encoding': [
+                'chunked',
+            ],
+        },
+        body: {
+            timestamp: 1565280988,
+            duration: 21600,
+            graphType: 'workload',
+            elements: {
+                nodes: [
+                    {
+                        data: {
+                            id: '16d04f68bd507ca9b0707c2a576d1fc2',
+                            nodeType: 'service',
+                            namespace: 'default',
+                            app: 'details',
+                            service: 'details',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'details',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.09',
+                                        httpOut: '0.09',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: '47efcb6a38cec94b8f02e15c58ce44df',
+                            nodeType: 'workload',
+                            namespace: 'default',
+                            workload: 'details-v1',
+                            app: 'details',
+                            version: 'v1',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'details',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.09',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'c2efd356d9a25fd009efe2a323e12361',
+                            nodeType: 'service',
+                            namespace: 'default',
+                            app: 'productpage',
+                            service: 'productpage',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'productpage',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.09',
+                                        httpOut: '0.09',
+                                    },
+                                },
+                            ],
+                            hasVS: true,
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'c7c4074158d3c18e0c780126e50637db',
+                            nodeType: 'workload',
+                            namespace: 'default',
+                            workload: 'productpage-v1',
+                            app: 'productpage',
+                            version: 'v1',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'productpage',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.09',
+                                        httpOut: '0.17',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: '906196769ac4714aae43f4f789a36d9c',
+                            nodeType: 'service',
+                            namespace: 'default',
+                            app: 'ratings',
+                            service: 'ratings',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'ratings',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.06',
+                                        httpOut: '0.06',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'b744c74ec7104950b36f9bf0b47a22fd',
+                            nodeType: 'workload',
+                            namespace: 'default',
+                            workload: 'ratings-v1',
+                            app: 'ratings',
+                            version: 'v1',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'ratings',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.06',
+                                        httpOut: '0.09',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'adbe9380f23fcbefe5fedd6beb0597ef',
+                            nodeType: 'service',
+                            namespace: 'default',
+                            app: 'reviews',
+                            service: 'reviews',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'reviews',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.09',
+                                        httpOut: '0.09',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: '2faa6ac001f450ec4000f88ddd8294a8',
+                            nodeType: 'workload',
+                            namespace: 'default',
+                            workload: 'reviews-v1',
+                            app: 'reviews',
+                            version: 'v1',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'reviews',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.03',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: '11b370489b738638fabddc4f4ce47ebd',
+                            nodeType: 'workload',
+                            namespace: 'default',
+                            workload: 'reviews-v2',
+                            app: 'reviews',
+                            version: 'v2',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'reviews',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.03',
+                                        httpOut: '0.03',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'a142ca56dcc06f79807bea3d6832a822',
+                            nodeType: 'workload',
+                            namespace: 'default',
+                            workload: 'reviews-v3',
+                            app: 'reviews',
+                            version: 'v3',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'reviews',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.03',
+                                        httpOut: '0.03',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                ],
+                edges: [
+                    {
+                        data: {
+                            id: 'aa74a640da3ebbbee6c73030530203fb',
+                            source: '11b370489b738638fabddc4f4ce47ebd',
+                            target: '906196769ac4714aae43f4f789a36d9c',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.03',
+                                    httpPercentReq: '100.0',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                            isMTLS: '0',
+                        },
+                    },
+                    {
+                        data: {
+                            id: '580175c5fe99b3240d7015cf15dfc90e',
+                            source: '16d04f68bd507ca9b0707c2a576d1fc2',
+                            target: '47efcb6a38cec94b8f02e15c58ce44df',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.09',
+                                    httpPercentReq: '100.0',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                            isMTLS: '0',
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'e198c81bdf764a377bc6b2cee397645a',
+                            source: '906196769ac4714aae43f4f789a36d9c',
+                            target: 'b744c74ec7104950b36f9bf0b47a22fd',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.06',
+                                    httpPercentReq: '100.0',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                            isMTLS: '0',
+                        },
+                    },
+                    {
+                        data: {
+                            id: '9863c09f007dee614e35196d3c88aadd',
+                            source: 'a142ca56dcc06f79807bea3d6832a822',
+                            target: '906196769ac4714aae43f4f789a36d9c',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.03',
+                                    httpPercentReq: '100.0',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                            isMTLS: '0',
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'b3d2d2ff860c2e7aad2eeae4dbd24661',
+                            source: 'adbe9380f23fcbefe5fedd6beb0597ef',
+                            target: '11b370489b738638fabddc4f4ce47ebd',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.03',
+                                    httpPercentReq: '33.3',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                            isMTLS: '0',
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'd6dd2c458394aa9bea0ae856ec79ff15',
+                            source: 'adbe9380f23fcbefe5fedd6beb0597ef',
+                            target: '2faa6ac001f450ec4000f88ddd8294a8',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.03',
+                                    httpPercentReq: '33.3',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                            isMTLS: '0',
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'fe5443ca8b56e65fb8f443a7732ae188',
+                            source: 'adbe9380f23fcbefe5fedd6beb0597ef',
+                            target: 'a142ca56dcc06f79807bea3d6832a822',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.03',
+                                    httpPercentReq: '33.3',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                            isMTLS: '0',
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'fd237c818ac6450de9157892e31759bf',
+                            source: 'b744c74ec7104950b36f9bf0b47a22fd',
+                            target: 'c2efd356d9a25fd009efe2a323e12361',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.09',
+                                    httpPercentReq: '100.0',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                            isMTLS: '0',
+                        },
+                    },
+                    {
+                        data: {
+                            id: '74df7999e8926d0703bb80755a595d5b',
+                            source: 'c2efd356d9a25fd009efe2a323e12361',
+                            target: 'c7c4074158d3c18e0c780126e50637db',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.09',
+                                    httpPercentReq: '100.0',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                            isMTLS: '0',
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'dd87ab618b5b03fe4617f502c9f4cd2e',
+                            source: 'c7c4074158d3c18e0c780126e50637db',
+                            target: '16d04f68bd507ca9b0707c2a576d1fc2',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.09',
+                                    httpPercentReq: '50.0',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                            isMTLS: '0',
+                        },
+                    },
+                    {
+                        data: {
+                            id: '0c351afdbdc682513491044d1433e3e8',
+                            source: 'c7c4074158d3c18e0c780126e50637db',
+                            target: 'adbe9380f23fcbefe5fedd6beb0597ef',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.09',
+                                    httpPercentReq: '50.0',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                            isMTLS: '0',
+                        },
+                    },
+                ],
+            },
+        },
+    },
+}

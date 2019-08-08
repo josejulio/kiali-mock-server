@@ -1,0 +1,224 @@
+{
+    meta: {
+        createdAt: '2019-08-08T16:25:23.897Z',
+        host: 'https://192.168.99.100:31385/kiali',
+        resHumanReadable: true,
+    },
+    req: {
+        url: '/api/namespaces/graph?duration=60s&graphType=app&injectServiceNodes=false&groupBy=app&appenders=deadNode,sidecarsCheck,serviceEntry,istio,unusedNode&namespaces=default',
+        method: 'GET',
+        headers: {
+            'x-forwarded-host': 'localhost:3000',
+            'x-forwarded-proto': 'http',
+            'x-forwarded-port': '3000',
+            'x-forwarded-for': '127.0.0.1',
+            cookie: '_ga=GA1.1.1514412781.1557421740; Webstorm-a9376004=b9c98f11-f6b4-4bb3-84c3-0983d04fd04e',
+            'accept-language': 'en,en-US;q=0.9,es-419;q=0.8,es;q=0.7',
+            referer: 'http://localhost:3000/console/graph/namespaces/?edges=noEdgeLabels&graphType=app&unusedNodes=true&injectServiceNodes=false&pi=0&duration=60&layout=dagre&namespaces=default',
+            'content-type': 'application/json;charset=utf-8',
+            'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+            'x-auth-type-kiali-ui': '1',
+            accept: 'application/json, text/plain, */*',
+            connection: 'close',
+        },
+        body: '',
+    },
+    res: {
+        status: 200,
+        headers: {
+            'content-type': [
+                'application/json',
+            ],
+            vary: [
+                'Accept-Encoding',
+            ],
+            date: [
+                'Thu, 08 Aug 2019 16:25:23 GMT',
+            ],
+            connection: [
+                'close',
+            ],
+            'transfer-encoding': [
+                'chunked',
+            ],
+        },
+        body: {
+            timestamp: 1565281523,
+            duration: 60,
+            graphType: 'app',
+            elements: {
+                nodes: [
+                    {
+                        data: {
+                            id: '791b47eae700823af5f816d23ba9b14e',
+                            nodeType: 'app',
+                            namespace: 'default',
+                            app: 'details',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'details',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.22',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: '6fd9613574c3a42b22e1521194cef78c',
+                            nodeType: 'app',
+                            namespace: 'default',
+                            app: 'productpage',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'productpage',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.22',
+                                        httpOut: '0.45',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'f99faf11799f73784885e2eee0c59af4',
+                            nodeType: 'app',
+                            namespace: 'default',
+                            app: 'ratings',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'ratings',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.13',
+                                        httpOut: '0.22',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: '1b1a7fb27dd423c730bc8987ac6d33d3',
+                            nodeType: 'app',
+                            namespace: 'default',
+                            app: 'reviews',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'reviews',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.22',
+                                        httpOut: '0.13',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                ],
+                edges: [
+                    {
+                        data: {
+                            id: '37d1fad9e94656f0ed2437bf88122a1b',
+                            source: '1b1a7fb27dd423c730bc8987ac6d33d3',
+                            target: 'f99faf11799f73784885e2eee0c59af4',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.13',
+                                    httpPercentReq: '100.0',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    {
+                        data: {
+                            id: '248fa9a065996e9beb5b97794730cf2d',
+                            source: '6fd9613574c3a42b22e1521194cef78c',
+                            target: '1b1a7fb27dd423c730bc8987ac6d33d3',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.22',
+                                    httpPercentReq: '50.1',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    {
+                        data: {
+                            id: '11edba0dba981e30a042e6323688c3b8',
+                            source: '6fd9613574c3a42b22e1521194cef78c',
+                            target: '791b47eae700823af5f816d23ba9b14e',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.22',
+                                    httpPercentReq: '49.9',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'c0215f8049b8b4d2dcba3dc223b1515b',
+                            source: 'f99faf11799f73784885e2eee0c59af4',
+                            target: '6fd9613574c3a42b22e1521194cef78c',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.22',
+                                    httpPercentReq: '100.0',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                        },
+                    },
+                ],
+            },
+        },
+    },
+}

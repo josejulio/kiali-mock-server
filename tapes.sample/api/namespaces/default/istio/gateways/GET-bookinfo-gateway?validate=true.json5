@@ -1,0 +1,106 @@
+{
+    meta: {
+        createdAt: '2019-08-08T16:29:13.719Z',
+        host: 'https://192.168.99.100:31385/kiali',
+        resHumanReadable: true,
+    },
+    req: {
+        url: '/api/namespaces/default/istio/gateways/bookinfo-gateway?validate=true',
+        method: 'GET',
+        headers: {
+            'x-forwarded-host': 'localhost:3000',
+            'x-forwarded-proto': 'http',
+            'x-forwarded-port': '3000',
+            'x-forwarded-for': '127.0.0.1',
+            cookie: '_ga=GA1.1.1514412781.1557421740; Webstorm-a9376004=b9c98f11-f6b4-4bb3-84c3-0983d04fd04e',
+            'accept-language': 'en,en-US;q=0.9,es-419;q=0.8,es;q=0.7',
+            referer: 'http://localhost:3000/console/namespaces/default/istio/gateways/bookinfo-gateway',
+            'content-type': 'application/json;charset=utf-8',
+            'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+            'x-auth-type-kiali-ui': '1',
+            accept: 'application/json, text/plain, */*',
+            connection: 'close',
+        },
+        body: '',
+    },
+    res: {
+        status: 200,
+        headers: {
+            'content-type': [
+                'application/json',
+            ],
+            vary: [
+                'Accept-Encoding',
+            ],
+            date: [
+                'Thu, 08 Aug 2019 16:29:13 GMT',
+            ],
+            'content-length': [
+                '1286',
+            ],
+            connection: [
+                'close',
+            ],
+        },
+        body: {
+            namespace: {
+                name: 'default',
+            },
+            objectType: 'gateways',
+            gateway: {
+                kind: 'Gateway',
+                apiVersion: 'networking.istio.io/v1alpha3',
+                metadata: {
+                    name: 'bookinfo-gateway',
+                    namespace: 'default',
+                    selfLink: '/apis/networking.istio.io/v1alpha3/namespaces/default/gateways/bookinfo-gateway',
+                    uid: 'b671162f-38d9-4e02-ba45-f89af5ce2935',
+                    resourceVersion: '10506',
+                    generation: 1,
+                    creationTimestamp: '2019-08-07T22:11:51Z',
+                    annotations: {
+                        'kubectl.kubernetes.io/last-applied-configuration': '{"apiVersion":"networking.istio.io/v1alpha3","kind":"Gateway","metadata":{"annotations":{},"name":"bookinfo-gateway","namespace":"default"},"spec":{"selector":{"istio":"ingressgateway"},"servers":[{"hosts":["*"],"port":{"name":"http","number":80,"protocol":"HTTP"}}]}}\n',
+                    },
+                },
+                spec: {
+                    servers: [
+                        {
+                            hosts: [
+                                '*',
+                            ],
+                            port: {
+                                name: 'http',
+                                number: 80,
+                                protocol: 'HTTP',
+                            },
+                        },
+                    ],
+                    selector: {
+                        istio: 'ingressgateway',
+                    },
+                },
+            },
+            virtualService: null,
+            destinationRule: null,
+            serviceEntry: null,
+            rule: null,
+            adapter: null,
+            template: null,
+            quotaSpec: null,
+            quotaSpecBinding: null,
+            policy: null,
+            meshPolicy: null,
+            clusterRbacConfig: null,
+            rbacConfig: null,
+            serviceRole: null,
+            serviceRoleBinding: null,
+            sidecar: null,
+            permissions: {
+                create: true,
+                update: true,
+                delete: true,
+            },
+            validation: null,
+        },
+    },
+}

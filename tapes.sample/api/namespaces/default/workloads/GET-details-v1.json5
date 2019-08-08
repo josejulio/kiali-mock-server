@@ -1,0 +1,132 @@
+{
+    meta: {
+        createdAt: '2019-08-08T16:27:14.023Z',
+        host: 'https://192.168.99.100:31385/kiali',
+        resHumanReadable: true,
+    },
+    req: {
+        url: '/api/namespaces/default/workloads/details-v1',
+        method: 'GET',
+        headers: {
+            'x-forwarded-host': 'localhost:3000',
+            'x-forwarded-proto': 'http',
+            'x-forwarded-port': '3000',
+            'x-forwarded-for': '127.0.0.1',
+            cookie: '_ga=GA1.1.1514412781.1557421740; Webstorm-a9376004=b9c98f11-f6b4-4bb3-84c3-0983d04fd04e',
+            'accept-language': 'en,en-US;q=0.9,es-419;q=0.8,es;q=0.7',
+            referer: 'http://localhost:3000/console/namespaces/default/workloads/details-v1?duration=60',
+            'content-type': 'application/json;charset=utf-8',
+            'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+            'x-auth-type-kiali-ui': '1',
+            accept: 'application/json, text/plain, */*',
+            connection: 'close',
+        },
+        body: '',
+    },
+    res: {
+        status: 200,
+        headers: {
+            'content-type': [
+                'application/json',
+            ],
+            vary: [
+                'Accept-Encoding',
+            ],
+            date: [
+                'Thu, 08 Aug 2019 16:27:14 GMT',
+            ],
+            'content-length': [
+                '1418',
+            ],
+            connection: [
+                'close',
+            ],
+        },
+        body: {
+            name: 'details-v1',
+            type: 'Deployment',
+            createdAt: '2019-08-07T21:26:33Z',
+            resourceVersion: '9818',
+            istioSidecar: true,
+            labels: {
+                app: 'details',
+                version: 'v1',
+            },
+            appLabel: true,
+            versionLabel: true,
+            podCount: 0,
+            desiredReplicas: 1,
+            currentReplicas: 1,
+            availableReplicas: 1,
+            pods: [
+                {
+                    name: 'details-v1-74f858558f-n69z5',
+                    labels: {
+                        app: 'details',
+                        'pod-template-hash': '74f858558f',
+                        version: 'v1',
+                    },
+                    createdAt: '2019-08-07T21:26:34Z',
+                    createdBy: [
+                        {
+                            name: 'details-v1-74f858558f',
+                            kind: 'ReplicaSet',
+                        },
+                    ],
+                    containers: [
+                        {
+                            name: 'details',
+                            image: 'docker.io/istio/examples-bookinfo-details-v1:1.15.0',
+                        },
+                    ],
+                    istioContainers: [
+                        {
+                            name: 'istio-proxy',
+                            image: 'docker.io/istio/proxyv2:1.2.3',
+                        },
+                    ],
+                    istioInitContainers: [
+                        {
+                            name: 'istio-init',
+                            image: 'docker.io/istio/proxy_init:1.2.3',
+                        },
+                    ],
+                    status: 'Running',
+                    appLabel: true,
+                    versionLabel: true,
+                    annotations: {
+                        'sidecar.istio.io/status': '{"version":"761ebc5a63976754715f22fcf548f05270fb4b8db07324894aebdb31fa81d960","initContainers":["istio-init"],"containers":["istio-proxy"],"volumes":["istio-envoy","istio-certs"],"imagePullSecrets":null}',
+                    },
+                },
+            ],
+            services: [
+                {
+                    name: 'details',
+                    createdAt: '2019-08-07T21:26:33Z',
+                    resourceVersion: '5936',
+                    namespace: {
+                        name: 'default',
+                    },
+                    labels: {
+                        app: 'details',
+                        service: 'details',
+                    },
+                    selectors: {
+                        app: 'details',
+                    },
+                    type: 'ClusterIP',
+                    ip: '10.101.179.142',
+                    ports: [
+                        {
+                            name: 'http',
+                            protocol: 'TCP',
+                            port: 9080,
+                        },
+                    ],
+                    externalName: '',
+                },
+            ],
+            runtimes: [],
+        },
+    },
+}

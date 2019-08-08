@@ -1,0 +1,338 @@
+{
+    meta: {
+        createdAt: '2019-08-08T16:25:30.393Z',
+        host: 'https://192.168.99.100:31385/kiali',
+        resHumanReadable: true,
+    },
+    req: {
+        url: '/api/namespaces/graph?duration=60s&graphType=workload&injectServiceNodes=false&appenders=deadNode,sidecarsCheck,serviceEntry,istio,unusedNode&namespaces=default',
+        method: 'GET',
+        headers: {
+            'x-forwarded-host': 'localhost:3000',
+            'x-forwarded-proto': 'http',
+            'x-forwarded-port': '3000',
+            'x-forwarded-for': '127.0.0.1',
+            cookie: '_ga=GA1.1.1514412781.1557421740; Webstorm-a9376004=b9c98f11-f6b4-4bb3-84c3-0983d04fd04e',
+            'accept-language': 'en,en-US;q=0.9,es-419;q=0.8,es;q=0.7',
+            referer: 'http://localhost:3000/console/graph/namespaces/?edges=noEdgeLabels&graphType=workload&unusedNodes=true&injectServiceNodes=false&pi=0&duration=60&layout=dagre&namespaces=default',
+            'content-type': 'application/json;charset=utf-8',
+            'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+            'x-auth-type-kiali-ui': '1',
+            accept: 'application/json, text/plain, */*',
+            connection: 'close',
+        },
+        body: '',
+    },
+    res: {
+        status: 200,
+        headers: {
+            'content-type': [
+                'application/json',
+            ],
+            vary: [
+                'Accept-Encoding',
+            ],
+            date: [
+                'Thu, 08 Aug 2019 16:25:30 GMT',
+            ],
+            connection: [
+                'close',
+            ],
+            'transfer-encoding': [
+                'chunked',
+            ],
+        },
+        body: {
+            timestamp: 1565281530,
+            duration: 60,
+            graphType: 'workload',
+            elements: {
+                nodes: [
+                    {
+                        data: {
+                            id: '47efcb6a38cec94b8f02e15c58ce44df',
+                            nodeType: 'workload',
+                            namespace: 'default',
+                            workload: 'details-v1',
+                            app: 'details',
+                            version: 'v1',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'details',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.22',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'c7c4074158d3c18e0c780126e50637db',
+                            nodeType: 'workload',
+                            namespace: 'default',
+                            workload: 'productpage-v1',
+                            app: 'productpage',
+                            version: 'v1',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'productpage',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.22',
+                                        httpOut: '0.45',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'b744c74ec7104950b36f9bf0b47a22fd',
+                            nodeType: 'workload',
+                            namespace: 'default',
+                            workload: 'ratings-v1',
+                            app: 'ratings',
+                            version: 'v1',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'ratings',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.13',
+                                        httpOut: '0.22',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: '2faa6ac001f450ec4000f88ddd8294a8',
+                            nodeType: 'workload',
+                            namespace: 'default',
+                            workload: 'reviews-v1',
+                            app: 'reviews',
+                            version: 'v1',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'reviews',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.09',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: '11b370489b738638fabddc4f4ce47ebd',
+                            nodeType: 'workload',
+                            namespace: 'default',
+                            workload: 'reviews-v2',
+                            app: 'reviews',
+                            version: 'v2',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'reviews',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.07',
+                                        httpOut: '0.07',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'a142ca56dcc06f79807bea3d6832a822',
+                            nodeType: 'workload',
+                            namespace: 'default',
+                            workload: 'reviews-v3',
+                            app: 'reviews',
+                            version: 'v3',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'reviews',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.07',
+                                        httpOut: '0.07',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                ],
+                edges: [
+                    {
+                        data: {
+                            id: '5d577c549824d1376e9fb8477324240c',
+                            source: '11b370489b738638fabddc4f4ce47ebd',
+                            target: 'b744c74ec7104950b36f9bf0b47a22fd',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.07',
+                                    httpPercentReq: '100.0',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    {
+                        data: {
+                            id: '6d153772912c7da9f206d2bbfc2cd543',
+                            source: 'a142ca56dcc06f79807bea3d6832a822',
+                            target: 'b744c74ec7104950b36f9bf0b47a22fd',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.07',
+                                    httpPercentReq: '100.0',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    {
+                        data: {
+                            id: '8d307450adfc71ea250bc9833094fb26',
+                            source: 'b744c74ec7104950b36f9bf0b47a22fd',
+                            target: 'c7c4074158d3c18e0c780126e50637db',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.22',
+                                    httpPercentReq: '100.0',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    {
+                        data: {
+                            id: '1bb64adef9a1e240198ab54f1c62fd7f',
+                            source: 'c7c4074158d3c18e0c780126e50637db',
+                            target: '11b370489b738638fabddc4f4ce47ebd',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.07',
+                                    httpPercentReq: '15.1',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    {
+                        data: {
+                            id: '19a3d7956bb828ec0e6932ebc1e75bc4',
+                            source: 'c7c4074158d3c18e0c780126e50637db',
+                            target: '2faa6ac001f450ec4000f88ddd8294a8',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.09',
+                                    httpPercentReq: '20.0',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    {
+                        data: {
+                            id: '5524b9faf77e42db3d0c979086d4bdc2',
+                            source: 'c7c4074158d3c18e0c780126e50637db',
+                            target: '47efcb6a38cec94b8f02e15c58ce44df',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.22',
+                                    httpPercentReq: '49.9',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    {
+                        data: {
+                            id: '0d480aa8fb2f300eee549fadfa91d340',
+                            source: 'c7c4074158d3c18e0c780126e50637db',
+                            target: 'a142ca56dcc06f79807bea3d6832a822',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.07',
+                                    httpPercentReq: '15.1',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                        },
+                    },
+                ],
+            },
+        },
+    },
+}

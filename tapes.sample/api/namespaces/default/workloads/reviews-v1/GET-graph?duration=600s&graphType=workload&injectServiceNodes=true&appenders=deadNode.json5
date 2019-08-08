@@ -1,0 +1,161 @@
+{
+    meta: {
+        createdAt: '2019-08-08T16:15:10.508Z',
+        host: 'https://192.168.99.100:31385/kiali',
+        resHumanReadable: true,
+    },
+    req: {
+        url: '/api/namespaces/default/workloads/reviews-v1/graph?duration=600s&graphType=workload&injectServiceNodes=true&appenders=deadNode',
+        method: 'GET',
+        headers: {
+            'x-forwarded-host': 'localhost:3000',
+            'x-forwarded-proto': 'http',
+            'x-forwarded-port': '3000',
+            'x-forwarded-for': '127.0.0.1',
+            cookie: '_ga=GA1.1.1514412781.1557421740; Webstorm-a9376004=b9c98f11-f6b4-4bb3-84c3-0983d04fd04e',
+            'accept-language': 'en,en-US;q=0.9,es-419;q=0.8,es;q=0.7',
+            referer: 'http://localhost:3000/console/namespaces/default/workloads/reviews-v1?tab=traffic',
+            'content-type': 'application/json;charset=utf-8',
+            'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+            'x-auth-type-kiali-ui': '1',
+            accept: 'application/json, text/plain, */*',
+            connection: 'close',
+        },
+        body: '',
+    },
+    res: {
+        status: 200,
+        headers: {
+            'content-type': [
+                'application/json',
+            ],
+            vary: [
+                'Accept-Encoding',
+            ],
+            date: [
+                'Thu, 08 Aug 2019 16:15:10 GMT',
+            ],
+            connection: [
+                'close',
+            ],
+            'transfer-encoding': [
+                'chunked',
+            ],
+        },
+        body: {
+            timestamp: 1565280910,
+            duration: 600,
+            graphType: 'workload',
+            elements: {
+                nodes: [
+                    {
+                        data: {
+                            id: 'adbe9380f23fcbefe5fedd6beb0597ef',
+                            nodeType: 'service',
+                            namespace: 'default',
+                            service: 'reviews',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'reviews',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.08',
+                                        httpOut: '0.08',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        data: {
+                            id: 'c7c4074158d3c18e0c780126e50637db',
+                            nodeType: 'workload',
+                            namespace: 'default',
+                            workload: 'productpage-v1',
+                            app: 'productpage',
+                            version: 'v1',
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpOut: '0.08',
+                                    },
+                                },
+                            ],
+                            isRoot: true,
+                        },
+                    },
+                    {
+                        data: {
+                            id: '2faa6ac001f450ec4000f88ddd8294a8',
+                            nodeType: 'workload',
+                            namespace: 'default',
+                            workload: 'reviews-v1',
+                            app: 'reviews',
+                            version: 'v1',
+                            destServices: [
+                                {
+                                    namespace: 'default',
+                                    name: 'reviews',
+                                },
+                            ],
+                            traffic: [
+                                {
+                                    protocol: 'http',
+                                    rates: {
+                                        httpIn: '0.08',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                ],
+                edges: [
+                    {
+                        data: {
+                            id: 'd6dd2c458394aa9bea0ae856ec79ff15',
+                            source: 'adbe9380f23fcbefe5fedd6beb0597ef',
+                            target: '2faa6ac001f450ec4000f88ddd8294a8',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.08',
+                                    httpPercentReq: '100.0',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    {
+                        data: {
+                            id: '0c351afdbdc682513491044d1433e3e8',
+                            source: 'c7c4074158d3c18e0c780126e50637db',
+                            target: 'adbe9380f23fcbefe5fedd6beb0597ef',
+                            traffic: {
+                                protocol: 'http',
+                                rates: {
+                                    http: '0.08',
+                                    httpPercentReq: '100.0',
+                                },
+                                responses: {
+                                    '200': {
+                                        '-': '100.0',
+                                    },
+                                },
+                            },
+                        },
+                    },
+                ],
+            },
+        },
+    },
+}

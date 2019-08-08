@@ -1,0 +1,103 @@
+{
+    meta: {
+        createdAt: '2019-08-08T16:10:31.479Z',
+        host: 'https://192.168.99.100:31385/kiali',
+        resHumanReadable: true,
+    },
+    req: {
+        url: '/api/namespaces/default/metrics?filters[]=request_count&filters[]=request_error_count&queryTime=1565280590&duration=21600&step=720&rateInterval=720s&direction=inbound&reporter=destination',
+        method: 'GET',
+        headers: {
+            'x-forwarded-host': 'localhost:3000',
+            'x-forwarded-proto': 'http',
+            'x-forwarded-port': '3000',
+            'x-forwarded-for': '127.0.0.1',
+            cookie: '_ga=GA1.1.1514412781.1557421740; Webstorm-a9376004=b9c98f11-f6b4-4bb3-84c3-0983d04fd04e',
+            'accept-language': 'en,en-US;q=0.9,es-419;q=0.8,es;q=0.7',
+            referer: 'http://localhost:3000/console/graph/namespaces/?edges=noEdgeLabels&graphType=versionedApp&namespaces=default&unusedNodes=false&injectServiceNodes=true&pi=0&duration=21600&layout=cose-bilkent',
+            'content-type': 'application/json;charset=utf-8',
+            'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+            'x-auth-type-kiali-ui': '1',
+            accept: 'application/json, text/plain, */*',
+            connection: 'close',
+        },
+        body: '',
+    },
+    res: {
+        status: 200,
+        headers: {
+            'content-type': [
+                'application/json',
+            ],
+            vary: [
+                'Accept-Encoding',
+            ],
+            date: [
+                'Thu, 08 Aug 2019 16:10:31 GMT',
+            ],
+            'content-length': [
+                '327',
+            ],
+            connection: [
+                'close',
+            ],
+        },
+        body: {
+            metrics: {
+                request_count: {
+                    matrix: [
+                        {
+                            metric: {},
+                            values: [
+                                [
+                                    1565273520,
+                                    '0.546',
+                                ],
+                                [
+                                    1565274240,
+                                    '0.957',
+                                ],
+                                [
+                                    1565274960,
+                                    '0.93',
+                                ],
+                                [
+                                    1565275680,
+                                    '0.942',
+                                ],
+                                [
+                                    1565276400,
+                                    '0.966',
+                                ],
+                                [
+                                    1565277120,
+                                    '0.989',
+                                ],
+                                [
+                                    1565277840,
+                                    '0.726',
+                                ],
+                                [
+                                    1565278560,
+                                    '0.733',
+                                ],
+                                [
+                                    1565279280,
+                                    '0.774',
+                                ],
+                                [
+                                    1565280000,
+                                    '0.81',
+                                ],
+                            ],
+                        },
+                    ],
+                },
+                request_error_count: {
+                    matrix: [],
+                },
+            },
+            histograms: {},
+        },
+    },
+}

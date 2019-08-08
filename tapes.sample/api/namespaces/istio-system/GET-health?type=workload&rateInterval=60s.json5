@@ -1,0 +1,230 @@
+{
+    meta: {
+        createdAt: '2019-08-08T16:25:00.768Z',
+        host: 'https://192.168.99.100:31385/kiali',
+        resHumanReadable: true,
+    },
+    req: {
+        url: '/api/namespaces/istio-system/health?type=workload&rateInterval=60s',
+        method: 'GET',
+        headers: {
+            'x-forwarded-host': 'localhost:3000',
+            'x-forwarded-proto': 'http',
+            'x-forwarded-port': '3000',
+            'x-forwarded-for': '127.0.0.1',
+            cookie: '_ga=GA1.1.1514412781.1557421740; Webstorm-a9376004=b9c98f11-f6b4-4bb3-84c3-0983d04fd04e',
+            'accept-language': 'en,en-US;q=0.9,es-419;q=0.8,es;q=0.7',
+            referer: 'http://localhost:3000/console/graph/namespaces/?edges=noEdgeLabels&graphType=versionedApp&unusedNodes=true&injectServiceNodes=true&pi=0&duration=60&layout=dagre&namespaces=default%2Cistio-system',
+            'content-type': 'application/json;charset=utf-8',
+            'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+            'x-auth-type-kiali-ui': '1',
+            accept: 'application/json, text/plain, */*',
+            connection: 'close',
+        },
+        body: '',
+    },
+    res: {
+        status: 200,
+        headers: {
+            'content-type': [
+                'application/json',
+            ],
+            vary: [
+                'Accept-Encoding',
+            ],
+            date: [
+                'Thu, 08 Aug 2019 16:25:00 GMT',
+            ],
+            connection: [
+                'close',
+            ],
+            'transfer-encoding': [
+                'chunked',
+            ],
+        },
+        body: {
+            'istio-citadel': {
+                workloadStatus: {
+                    name: 'istio-citadel',
+                    desiredReplicas: 1,
+                    currentReplicas: 1,
+                    availableReplicas: 1,
+                },
+                requests: {
+                    errorRatio: 0,
+                    inboundErrorRatio: 0,
+                    outboundErrorRatio: 0,
+                },
+            },
+            'istio-cleanup-secrets-1.2.3': {
+                workloadStatus: {
+                    name: 'istio-cleanup-secrets-1.2.3',
+                    desiredReplicas: 1,
+                    currentReplicas: 1,
+                    availableReplicas: 1,
+                },
+                requests: {
+                    errorRatio: 0,
+                    inboundErrorRatio: 0,
+                    outboundErrorRatio: 0,
+                },
+            },
+            'istio-galley': {
+                workloadStatus: {
+                    name: 'istio-galley',
+                    desiredReplicas: 1,
+                    currentReplicas: 1,
+                    availableReplicas: 1,
+                },
+                requests: {
+                    errorRatio: 0,
+                    inboundErrorRatio: 0,
+                    outboundErrorRatio: 0,
+                },
+            },
+            'istio-ingressgateway': {
+                workloadStatus: {
+                    name: 'istio-ingressgateway',
+                    desiredReplicas: 1,
+                    currentReplicas: 1,
+                    availableReplicas: 1,
+                },
+                requests: {
+                    errorRatio: 0,
+                    inboundErrorRatio: 0,
+                    outboundErrorRatio: 0,
+                },
+            },
+            'istio-init-crd-10': {
+                workloadStatus: {
+                    name: 'istio-init-crd-10',
+                    desiredReplicas: 1,
+                    currentReplicas: 1,
+                    availableReplicas: 1,
+                },
+                requests: {
+                    errorRatio: 0,
+                    inboundErrorRatio: 0,
+                    outboundErrorRatio: 0,
+                },
+            },
+            'istio-init-crd-11': {
+                workloadStatus: {
+                    name: 'istio-init-crd-11',
+                    desiredReplicas: 1,
+                    currentReplicas: 1,
+                    availableReplicas: 1,
+                },
+                requests: {
+                    errorRatio: 0,
+                    inboundErrorRatio: 0,
+                    outboundErrorRatio: 0,
+                },
+            },
+            'istio-init-crd-12': {
+                workloadStatus: {
+                    name: 'istio-init-crd-12',
+                    desiredReplicas: 1,
+                    currentReplicas: 1,
+                    availableReplicas: 1,
+                },
+                requests: {
+                    errorRatio: 0,
+                    inboundErrorRatio: 0,
+                    outboundErrorRatio: 0,
+                },
+            },
+            'istio-pilot': {
+                workloadStatus: {
+                    name: 'istio-pilot',
+                    desiredReplicas: 1,
+                    currentReplicas: 1,
+                    availableReplicas: 1,
+                },
+                requests: {
+                    errorRatio: 0,
+                    inboundErrorRatio: 0,
+                    outboundErrorRatio: 0,
+                },
+            },
+            'istio-policy': {
+                workloadStatus: {
+                    name: 'istio-policy',
+                    desiredReplicas: 1,
+                    currentReplicas: 1,
+                    availableReplicas: 1,
+                },
+                requests: {
+                    errorRatio: 0,
+                    inboundErrorRatio: 0,
+                    outboundErrorRatio: 0,
+                },
+            },
+            'istio-security-post-install-1.2.3': {
+                workloadStatus: {
+                    name: 'istio-security-post-install-1.2.3',
+                    desiredReplicas: 1,
+                    currentReplicas: 1,
+                    availableReplicas: 1,
+                },
+                requests: {
+                    errorRatio: 0,
+                    inboundErrorRatio: 0,
+                    outboundErrorRatio: 0,
+                },
+            },
+            'istio-sidecar-injector': {
+                workloadStatus: {
+                    name: 'istio-sidecar-injector',
+                    desiredReplicas: 1,
+                    currentReplicas: 1,
+                    availableReplicas: 1,
+                },
+                requests: {
+                    errorRatio: 0,
+                    inboundErrorRatio: 0,
+                    outboundErrorRatio: 0,
+                },
+            },
+            'istio-telemetry': {
+                workloadStatus: {
+                    name: 'istio-telemetry',
+                    desiredReplicas: 1,
+                    currentReplicas: 1,
+                    availableReplicas: 1,
+                },
+                requests: {
+                    errorRatio: 0,
+                    inboundErrorRatio: 0,
+                    outboundErrorRatio: 0,
+                },
+            },
+            kiali: {
+                workloadStatus: {
+                    name: 'kiali',
+                    desiredReplicas: 1,
+                    currentReplicas: 1,
+                    availableReplicas: 1,
+                },
+                requests: {
+                    errorRatio: 0,
+                    inboundErrorRatio: 0,
+                    outboundErrorRatio: 0,
+                },
+            },
+            prometheus: {
+                workloadStatus: {
+                    name: 'prometheus',
+                    desiredReplicas: 1,
+                    currentReplicas: 1,
+                    availableReplicas: 1,
+                },
+                requests: {
+                    errorRatio: 0,
+                    inboundErrorRatio: 0,
+                    outboundErrorRatio: 0,
+                },
+            },
+        },
+    },
+}

@@ -1,0 +1,174 @@
+{
+    meta: {
+        createdAt: '2019-08-08T16:28:29.190Z',
+        host: 'https://192.168.99.100:31385/kiali',
+        resHumanReadable: true,
+    },
+    req: {
+        url: '/api/namespaces/default/services/reviews?validate=true&rateInterval=60s',
+        method: 'GET',
+        headers: {
+            'x-forwarded-host': 'localhost:3000',
+            'x-forwarded-proto': 'http',
+            'x-forwarded-port': '3000',
+            'x-forwarded-for': '127.0.0.1',
+            cookie: '_ga=GA1.1.1514412781.1557421740; Webstorm-a9376004=b9c98f11-f6b4-4bb3-84c3-0983d04fd04e',
+            'accept-language': 'en,en-US;q=0.9,es-419;q=0.8,es;q=0.7',
+            referer: 'http://localhost:3000/console/namespaces/default/services/reviews?duration=60',
+            'content-type': 'application/json;charset=utf-8',
+            'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+            'x-auth-type-kiali-ui': '1',
+            accept: 'application/json, text/plain, */*',
+            connection: 'close',
+        },
+        body: '',
+    },
+    res: {
+        status: 200,
+        headers: {
+            'content-type': [
+                'application/json',
+            ],
+            vary: [
+                'Accept-Encoding',
+            ],
+            date: [
+                'Thu, 08 Aug 2019 16:28:29 GMT',
+            ],
+            'content-length': [
+                '1624',
+            ],
+            connection: [
+                'close',
+            ],
+        },
+        body: {
+            service: {
+                name: 'reviews',
+                createdAt: '2019-08-07T21:26:33Z',
+                resourceVersion: '5958',
+                namespace: {
+                    name: 'default',
+                },
+                labels: {
+                    app: 'reviews',
+                    service: 'reviews',
+                },
+                selectors: {
+                    app: 'reviews',
+                },
+                type: 'ClusterIP',
+                ip: '10.108.2.86',
+                ports: [
+                    {
+                        name: 'http',
+                        protocol: 'TCP',
+                        port: 9080,
+                    },
+                ],
+                externalName: '',
+            },
+            istioSidecar: true,
+            endpoints: [
+                {
+                    addresses: [
+                        {
+                            kind: 'Pod',
+                            name: 'reviews-v1-59fd8b965b-vgz8g',
+                            ip: '172.17.0.14',
+                        },
+                        {
+                            kind: 'Pod',
+                            name: 'reviews-v2-d6cfdb7d6-rnzfq',
+                            ip: '172.17.0.15',
+                        },
+                        {
+                            kind: 'Pod',
+                            name: 'reviews-v3-75699b5cfb-5hkwp',
+                            ip: '172.17.0.19',
+                        },
+                    ],
+                    ports: [
+                        {
+                            name: 'http',
+                            protocol: 'TCP',
+                            port: 9080,
+                        },
+                    ],
+                },
+            ],
+            virtualServices: {
+                permissions: {
+                    create: true,
+                    update: true,
+                    delete: true,
+                },
+                items: [],
+            },
+            destinationRules: {
+                permissions: {
+                    create: true,
+                    update: true,
+                    delete: true,
+                },
+                items: [],
+            },
+            workloads: [
+                {
+                    name: 'reviews-v1',
+                    type: 'Deployment',
+                    createdAt: '2019-08-07T21:26:33Z',
+                    resourceVersion: '10039',
+                    istioSidecar: true,
+                    labels: {
+                        app: 'reviews',
+                        version: 'v1',
+                    },
+                    appLabel: true,
+                    versionLabel: true,
+                    podCount: 1,
+                },
+                {
+                    name: 'reviews-v2',
+                    type: 'Deployment',
+                    createdAt: '2019-08-07T21:26:33Z',
+                    resourceVersion: '10018',
+                    istioSidecar: true,
+                    labels: {
+                        app: 'reviews',
+                        version: 'v2',
+                    },
+                    appLabel: true,
+                    versionLabel: true,
+                    podCount: 1,
+                },
+                {
+                    name: 'reviews-v3',
+                    type: 'Deployment',
+                    createdAt: '2019-08-07T21:26:33Z',
+                    resourceVersion: '9735',
+                    istioSidecar: true,
+                    labels: {
+                        app: 'reviews',
+                        version: 'v3',
+                    },
+                    appLabel: true,
+                    versionLabel: true,
+                    podCount: 1,
+                },
+            ],
+            health: {
+                requests: {
+                    errorRatio: 0,
+                    inboundErrorRatio: 0,
+                    outboundErrorRatio: -1,
+                },
+            },
+            validations: {},
+            errorTraces: 0,
+            namespaceMTLS: {
+                status: 'MTLS_NOT_ENABLED',
+            },
+        },
+    },
+}

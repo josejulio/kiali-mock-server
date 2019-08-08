@@ -1,0 +1,49 @@
+{
+    meta: {
+        createdAt: '2019-08-08T16:27:31.480Z',
+        host: 'https://192.168.99.100:31385/kiali',
+        resHumanReadable: true,
+    },
+    req: {
+        url: '/api/namespaces/default/pods/ratings-v1-7855f5bcb9-c94zh/logs?container=ratings&sinceTime=1565281051&tailLines=500',
+        method: 'GET',
+        headers: {
+            'x-forwarded-host': 'localhost:3000',
+            'x-forwarded-proto': 'http',
+            'x-forwarded-port': '3000',
+            'x-forwarded-for': '127.0.0.1',
+            cookie: '_ga=GA1.1.1514412781.1557421740; Webstorm-a9376004=b9c98f11-f6b4-4bb3-84c3-0983d04fd04e',
+            'accept-language': 'en,en-US;q=0.9,es-419;q=0.8,es;q=0.7',
+            referer: 'http://localhost:3000/console/namespaces/default/workloads/ratings-v1?tab=logs',
+            'content-type': 'application/json;charset=utf-8',
+            'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+            'x-auth-type-kiali-ui': '1',
+            accept: 'application/json, text/plain, */*',
+            connection: 'close',
+        },
+        body: '',
+    },
+    res: {
+        status: 200,
+        headers: {
+            'content-type': [
+                'application/json',
+            ],
+            vary: [
+                'Accept-Encoding',
+            ],
+            date: [
+                'Thu, 08 Aug 2019 16:27:31 GMT',
+            ],
+            connection: [
+                'close',
+            ],
+            'transfer-encoding': [
+                'chunked',
+            ],
+        },
+        body: {
+            logs: '2019-08-08T16:17:40.279689188Z GET /ratings/0\n2019-08-08T16:17:44.365811744Z GET /ratings/0\n2019-08-08T16:17:48.653013853Z GET /ratings/0\n2019-08-08T16:17:52.99806634Z GET /ratings/0\n2019-08-08T16:18:05.401235214Z GET /ratings/0\n2019-08-08T16:18:09.466991949Z GET /ratings/0\n2019-08-08T16:18:13.708667607Z GET /ratings/0\n2019-08-08T16:18:21.936552636Z GET /ratings/0\n2019-08-08T16:18:25.760212982Z GET /ratings/0\n2019-08-08T16:18:29.790323969Z GET /ratings/0\n2019-08-08T16:18:38.377152559Z GET /ratings/0\n2019-08-08T16:18:42.37696207Z GET /ratings/0\n2019-08-08T16:18:54.634092325Z GET /ratings/0\n2019-08-08T16:18:58.721703688Z GET /ratings/0\n2019-08-08T16:19:02.635692018Z GET /ratings/0\n2019-08-08T16:19:07.160672783Z GET /ratings/0\n2019-08-08T16:19:15.160019336Z GET /ratings/0\n2019-08-08T16:19:19.162915753Z GET /ratings/0\n2019-08-08T16:19:27.27266222Z GET /ratings/0\n2019-08-08T16:19:36.184541404Z GET /ratings/0\n2019-08-08T16:19:40.238305884Z GET /ratings/0\n2019-08-08T16:19:44.301122616Z GET /ratings/0\n2019-08-08T16:19:52.952589263Z GET /ratings/0\n2019-08-08T16:19:57.583303297Z GET /ratings/0\n2019-08-08T16:20:10.06134226Z GET /ratings/0\n2019-08-08T16:20:16.036106633Z GET /ratings/0\n2019-08-08T16:20:24.899853615Z GET /ratings/0\n2019-08-08T16:20:29.402099621Z GET /ratings/0\n2019-08-08T16:20:33.55033716Z GET /ratings/0\n2019-08-08T16:20:37.586046705Z GET /ratings/0\n2019-08-08T16:20:46.372195053Z GET /ratings/0\n2019-08-08T16:20:54.715834564Z GET /ratings/0\n2019-08-08T16:20:58.727977147Z GET /ratings/0\n2019-08-08T16:21:07.265739382Z GET /ratings/0\n2019-08-08T16:21:15.266929568Z GET /ratings/0\n2019-08-08T16:21:19.417651413Z GET /ratings/0\n2019-08-08T16:21:23.473688595Z GET /ratings/0\n2019-08-08T16:21:33.001636514Z GET /ratings/0\n2019-08-08T16:21:36.967034523Z GET /ratings/0\n2019-08-08T16:21:44.771373988Z GET /ratings/0\n2019-08-08T16:21:48.917475273Z GET /ratings/0\n2019-08-08T16:21:58.093352778Z GET /ratings/0\n2019-08-08T16:22:02.631101362Z GET /ratings/0\n2019-08-08T16:22:11.487940738Z GET /ratings/0\n2019-08-08T16:22:19.709063418Z GET /ratings/0\n2019-08-08T16:22:23.672864503Z GET /ratings/0\n2019-08-08T16:22:27.640286438Z GET /ratings/0\n2019-08-08T16:22:36.392361468Z GET /ratings/0\n2019-08-08T16:22:40.313365445Z GET /ratings/0\n2019-08-08T16:22:49.140063573Z GET /ratings/0\n2019-08-08T16:22:53.295099946Z GET /ratings/0\n2019-08-08T16:23:01.830042397Z GET /ratings/0\n2019-08-08T16:23:05.725498668Z GET /ratings/0\n2019-08-08T16:23:13.822847728Z GET /ratings/0\n2019-08-08T16:23:18.005306273Z GET /ratings/0\n2019-08-08T16:23:26.391260883Z GET /ratings/0\n2019-08-08T16:23:35.453101301Z GET /ratings/0\n2019-08-08T16:23:39.90771632Z GET /ratings/0\n2019-08-08T16:23:48.682859465Z GET /ratings/0\n2019-08-08T16:23:52.702554962Z GET /ratings/0\n2019-08-08T16:24:00.619926398Z GET /ratings/0\n2019-08-08T16:24:04.709422914Z GET /ratings/0\n2019-08-08T16:24:08.909857948Z GET /ratings/0\n2019-08-08T16:24:17.365004324Z GET /ratings/0\n2019-08-08T16:24:21.337180045Z GET /ratings/0\n2019-08-08T16:24:30.232191356Z GET /ratings/0\n2019-08-08T16:24:34.242256164Z GET /ratings/0\n2019-08-08T16:24:42.201256479Z GET /ratings/0\n2019-08-08T16:24:46.229925121Z GET /ratings/0\n2019-08-08T16:24:54.414937614Z GET /ratings/0\n2019-08-08T16:25:02.981117831Z GET /ratings/0\n2019-08-08T16:25:06.971373348Z GET /ratings/0\n2019-08-08T16:25:12.060661565Z GET /ratings/0\n2019-08-08T16:25:20.215858544Z GET /ratings/0\n2019-08-08T16:25:24.308226021Z GET /ratings/0\n2019-08-08T16:25:28.401375459Z GET /ratings/0\n2019-08-08T16:25:36.417735516Z GET /ratings/0\n2019-08-08T16:25:45.692632658Z GET /ratings/0\n2019-08-08T16:25:54.078427516Z GET /ratings/0\n2019-08-08T16:25:59.233780626Z GET /ratings/0\n2019-08-08T16:26:03.221240481Z GET /ratings/0\n2019-08-08T16:26:07.362596164Z GET /ratings/0\n2019-08-08T16:26:20.993478902Z GET /ratings/0\n2019-08-08T16:26:25.082901916Z GET /ratings/0\n2019-08-08T16:26:33.689224805Z GET /ratings/0\n2019-08-08T16:26:38.019769791Z GET /ratings/0\n2019-08-08T16:26:42.047419341Z GET /ratings/0\n2019-08-08T16:26:46.482777297Z GET /ratings/0\n2019-08-08T16:26:59.210783116Z GET /ratings/0\n2019-08-08T16:27:03.521538031Z GET /ratings/0\n2019-08-08T16:27:07.733761761Z GET /ratings/0\n2019-08-08T16:27:15.790019205Z GET /ratings/0\n2019-08-08T16:27:19.680293817Z GET /ratings/0\n2019-08-08T16:27:23.69959474Z GET /ratings/0\n',
+        },
+    },
+}

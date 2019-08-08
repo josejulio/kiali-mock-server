@@ -1,0 +1,119 @@
+{
+    meta: {
+        createdAt: '2019-08-08T16:28:16.545Z',
+        host: 'https://192.168.99.100:31385/kiali',
+        resHumanReadable: true,
+    },
+    req: {
+        url: '/api/namespaces/default/services/kubernetes?validate=true&rateInterval=60s',
+        method: 'GET',
+        headers: {
+            'x-forwarded-host': 'localhost:3000',
+            'x-forwarded-proto': 'http',
+            'x-forwarded-port': '3000',
+            'x-forwarded-for': '127.0.0.1',
+            cookie: '_ga=GA1.1.1514412781.1557421740; Webstorm-a9376004=b9c98f11-f6b4-4bb3-84c3-0983d04fd04e',
+            'accept-language': 'en,en-US;q=0.9,es-419;q=0.8,es;q=0.7',
+            referer: 'http://localhost:3000/console/namespaces/default/services/kubernetes?duration=60',
+            'content-type': 'application/json;charset=utf-8',
+            'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+            'x-auth-type-kiali-ui': '1',
+            accept: 'application/json, text/plain, */*',
+            connection: 'close',
+        },
+        body: '',
+    },
+    res: {
+        status: 200,
+        headers: {
+            'content-type': [
+                'application/json',
+            ],
+            vary: [
+                'Accept-Encoding',
+            ],
+            date: [
+                'Thu, 08 Aug 2019 16:28:16 GMT',
+            ],
+            'content-length': [
+                '818',
+            ],
+            connection: [
+                'close',
+            ],
+        },
+        body: {
+            service: {
+                name: 'kubernetes',
+                createdAt: '2019-08-07T20:30:20Z',
+                resourceVersion: '153',
+                namespace: {
+                    name: 'default',
+                },
+                labels: {
+                    component: 'apiserver',
+                    provider: 'kubernetes',
+                },
+                selectors: null,
+                type: 'ClusterIP',
+                ip: '10.96.0.1',
+                ports: [
+                    {
+                        name: 'https',
+                        protocol: 'TCP',
+                        port: 443,
+                    },
+                ],
+                externalName: '',
+            },
+            istioSidecar: true,
+            endpoints: [
+                {
+                    addresses: [
+                        {
+                            kind: '',
+                            name: '',
+                            ip: '192.168.99.100',
+                        },
+                    ],
+                    ports: [
+                        {
+                            name: 'https',
+                            protocol: 'TCP',
+                            port: 8443,
+                        },
+                    ],
+                },
+            ],
+            virtualServices: {
+                permissions: {
+                    create: true,
+                    update: true,
+                    delete: true,
+                },
+                items: [],
+            },
+            destinationRules: {
+                permissions: {
+                    create: true,
+                    update: true,
+                    delete: true,
+                },
+                items: [],
+            },
+            workloads: [],
+            health: {
+                requests: {
+                    errorRatio: -1,
+                    inboundErrorRatio: -1,
+                    outboundErrorRatio: -1,
+                },
+            },
+            validations: {},
+            errorTraces: 0,
+            namespaceMTLS: {
+                status: 'MTLS_NOT_ENABLED',
+            },
+        },
+    },
+}
