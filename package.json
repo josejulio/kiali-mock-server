@@ -20,7 +20,9 @@
       "url": "https://github.com/josejulio/kiali-mock-server/blob/master/LICENSE-MIT"
     }
   ],
-  "scripts": {},
+  "scripts": {
+    "start": "node ."
+  },
   "main": "src/index",
   "engines": {
     "node": ">= 0.8.0"
